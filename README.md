@@ -1,4 +1,4 @@
 SRToolkit
 =========
 
-iOS libraries that made by Seorenn
+Seorenn(SR) Toolkit for iOS
