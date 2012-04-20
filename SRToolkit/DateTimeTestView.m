@@ -7,6 +7,7 @@
 //
 
 #import "DateTimeTestView.h"
+#import "SRDateTime.h"
 
 @interface DateTimeTestView ()
 
@@ -16,7 +17,30 @@
 
 - (void)runTest
 {
+    NSString *result = @"";
     
+    NSDate *now = [NSDate date];
+    result = [result stringByAppendingFormat:@"[NSDate date] = %@\n\n", now];
+    
+    SRDateTime *dt = [SRDateTime dateTimeFromNSDate:now];
+    result = [result stringByAppendingFormat:@"SRDateTime.year = %d\n", dt.year];
+    result = [result stringByAppendingFormat:@"SRDateTime.month = %d\n", dt.month];
+    result = [result stringByAppendingFormat:@"SRDateTime.day = %d\n", dt.day];
+    result = [result stringByAppendingFormat:@"SRDateTime.hour = %d\n", dt.hour];
+    result = [result stringByAppendingFormat:@"SRDateTime.minute = %d\n", dt.minute];
+    result = [result stringByAppendingFormat:@"SRDateTime.second = %d\n\n", dt.second];
+    
+    NSDate *convdt = [dt nsDate];
+    result = [result stringByAppendingFormat:@"Convert SRDateTime to NSDate = %@\n\n", convdt];
+    
+    if ([now isEqualToDate:now]) {
+        result = [result stringByAppendingString:@"Converted NSDate object value is same with original"];
+    }
+    else {
+        result = [result stringByAppendingString:@"Converted NSDate object value is not same with original"];
+    }
+    
+    _textView.text = result;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
