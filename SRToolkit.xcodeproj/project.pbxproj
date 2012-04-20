@@ -13,9 +13,9 @@
 		8A8F9BFE153D0F7B00306893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9BFC153D0F7B00306893 /* InfoPlist.strings */; };
 		8A8F9C00153D0F7B00306893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9BFF153D0F7B00306893 /* main.m */; };
 		8A8F9C04153D0F7B00306893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9C03153D0F7B00306893 /* AppDelegate.m */; };
-		8A8F9C12153D103E00306893 /* SRFullProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9C11153D103E00306893 /* SRFullProgressHud.m */; };
 		8A8F9C16153D195700306893 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9C14153D195700306893 /* TestView.m */; };
 		8A8F9C17153D195700306893 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9C15153D195700306893 /* TestView.xib */; };
+		8A90A88F1540FC0200F82942 /* SRFullProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A88E1540FC0200F82942 /* SRFullProgressHud.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 		8A8F9C01153D0F7B00306893 /* SRToolkit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SRToolkit-Prefix.pch"; sourceTree = "<group>"; };
 		8A8F9C02153D0F7B00306893 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8F9C03153D0F7B00306893 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A8F9C10153D103E00306893 /* SRFullProgressHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRFullProgressHud.h; path = SRFullProgressHud/SRFullProgressHud.h; sourceTree = "<group>"; };
-		8A8F9C11153D103E00306893 /* SRFullProgressHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRFullProgressHud.m; path = SRFullProgressHud/SRFullProgressHud.m; sourceTree = "<group>"; };
 		8A8F9C13153D195700306893 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		8A8F9C14153D195700306893 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		8A8F9C15153D195700306893 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		8A90A88D1540FC0200F82942 /* SRFullProgressHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRFullProgressHud.h; path = Classes/SRFullProgressHud/SRFullProgressHud.h; sourceTree = SOURCE_ROOT; };
+		8A90A88E1540FC0200F82942 /* SRFullProgressHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRFullProgressHud.m; path = Classes/SRFullProgressHud/SRFullProgressHud.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 		8A8F9C0E153D100700306893 /* SRFullProgressHud */ = {
 			isa = PBXGroup;
 			children = (
-				8A8F9C10153D103E00306893 /* SRFullProgressHud.h */,
-				8A8F9C11153D103E00306893 /* SRFullProgressHud.m */,
+				8A90A88D1540FC0200F82942 /* SRFullProgressHud.h */,
+				8A90A88E1540FC0200F82942 /* SRFullProgressHud.m */,
 			);
 			name = SRFullProgressHud;
 			sourceTree = "<group>";
@@ -175,8 +175,8 @@
 			files = (
 				8A8F9C00153D0F7B00306893 /* main.m in Sources */,
 				8A8F9C04153D0F7B00306893 /* AppDelegate.m in Sources */,
-				8A8F9C12153D103E00306893 /* SRFullProgressHud.m in Sources */,
 				8A8F9C16153D195700306893 /* TestView.m in Sources */,
+				8A90A88F1540FC0200F82942 /* SRFullProgressHud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
