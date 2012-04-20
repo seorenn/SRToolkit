@@ -16,6 +16,9 @@
 		8A8F9C16153D195700306893 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9C14153D195700306893 /* TestView.m */; };
 		8A8F9C17153D195700306893 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9C15153D195700306893 /* TestView.xib */; };
 		8A90A88F1540FC0200F82942 /* SRFullProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A88E1540FC0200F82942 /* SRFullProgressHud.m */; };
+		8A90A8931540FCAC00F82942 /* SRDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A8921540FCAC00F82942 /* SRDateTime.m */; };
+		8A90A8971541012B00F82942 /* DateTimeTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A8951541012B00F82942 /* DateTimeTestView.m */; };
+		8A90A8981541012B00F82942 /* DateTimeTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A90A8961541012B00F82942 /* DateTimeTestView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,11 @@
 		8A8F9C15153D195700306893 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		8A90A88D1540FC0200F82942 /* SRFullProgressHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRFullProgressHud.h; path = Classes/SRFullProgressHud/SRFullProgressHud.h; sourceTree = SOURCE_ROOT; };
 		8A90A88E1540FC0200F82942 /* SRFullProgressHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRFullProgressHud.m; path = Classes/SRFullProgressHud/SRFullProgressHud.m; sourceTree = SOURCE_ROOT; };
+		8A90A8911540FCAC00F82942 /* SRDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRDateTime.h; path = Classes/SRDateTime/SRDateTime.h; sourceTree = SOURCE_ROOT; };
+		8A90A8921540FCAC00F82942 /* SRDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRDateTime.m; path = Classes/SRDateTime/SRDateTime.m; sourceTree = SOURCE_ROOT; };
+		8A90A8941541012B00F82942 /* DateTimeTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimeTestView.h; sourceTree = "<group>"; };
+		8A90A8951541012B00F82942 /* DateTimeTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeTestView.m; sourceTree = "<group>"; };
+		8A90A8961541012B00F82942 /* DateTimeTestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateTimeTestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		8A8F9BF9153D0F7B00306893 /* SRToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				8A90A8901540FCA200F82942 /* SRDateTime */,
 				8A8F9C0E153D100700306893 /* SRFullProgressHud */,
 				8A8F9C02153D0F7B00306893 /* AppDelegate.h */,
 				8A8F9C03153D0F7B00306893 /* AppDelegate.m */,
@@ -109,6 +118,18 @@
 				8A90A88E1540FC0200F82942 /* SRFullProgressHud.m */,
 			);
 			name = SRFullProgressHud;
+			sourceTree = "<group>";
+		};
+		8A90A8901540FCA200F82942 /* SRDateTime */ = {
+			isa = PBXGroup;
+			children = (
+				8A90A8911540FCAC00F82942 /* SRDateTime.h */,
+				8A90A8921540FCAC00F82942 /* SRDateTime.m */,
+				8A90A8941541012B00F82942 /* DateTimeTestView.h */,
+				8A90A8951541012B00F82942 /* DateTimeTestView.m */,
+				8A90A8961541012B00F82942 /* DateTimeTestView.xib */,
+			);
+			name = SRDateTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +184,7 @@
 			files = (
 				8A8F9BFE153D0F7B00306893 /* InfoPlist.strings in Resources */,
 				8A8F9C17153D195700306893 /* TestView.xib in Resources */,
+				8A90A8981541012B00F82942 /* DateTimeTestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +199,8 @@
 				8A8F9C04153D0F7B00306893 /* AppDelegate.m in Sources */,
 				8A8F9C16153D195700306893 /* TestView.m in Sources */,
 				8A90A88F1540FC0200F82942 /* SRFullProgressHud.m in Sources */,
+				8A90A8931540FCAC00F82942 /* SRDateTime.m in Sources */,
+				8A90A8971541012B00F82942 /* DateTimeTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

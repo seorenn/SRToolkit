@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestView.h"
 
 @implementation AppDelegate
 
@@ -13,7 +14,7 @@
 
 - (void)dealloc
 {
-    [_testView release];
+    [_nav release];
     [_window release];
     [super dealloc];
 }
@@ -24,8 +25,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    _testView = [[TestView alloc] initWithNibName:@"TestView" bundle:nil];
-    [self.window addSubview:_testView.view];
+    TestView *view = [[TestView alloc] initWithNibName:@"TestView" bundle:nil];
+    _nav = [[UINavigationController alloc] initWithRootViewController:view];
+    [view release];
+    
+    [self.window addSubview:_nav.view];
     
     [self.window makeKeyAndVisible];
     return YES;

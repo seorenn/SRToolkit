@@ -6,10 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TestView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    TestView *_testView;
+    UINavigationController *_nav;
 }
 
 @property (strong, nonatomic) UIWindow *window;

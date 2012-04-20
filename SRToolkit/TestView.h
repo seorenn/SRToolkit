@@ -7,12 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestView : UIViewController {
+@interface TestView : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    NSMutableArray *_items;
     NSTimer *_timer;
+    IBOutlet UITableView *_tableView;
 }
-
-- (IBAction)pressedSRFullProgressHud:(id)sender;
-- (IBAction)pressedDismissAllButton:(id)sender;
-
 
 @end
