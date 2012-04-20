@@ -2,8 +2,7 @@
 //  DateTimeTestView.m
 //  SRToolkit
 //
-//  Created by Heeseung Seo on 12. 4. 20..
-//  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
+//  Created by Seorenn <hirenn@gmail.com>
 //
 
 #import "DateTimeTestView.h"

@@ -2,8 +2,7 @@
 //  TimeHelper.m
 //  iCoupleVow
 //
-//  Created by Heeseung Seo on 11. 11. 17..
-//  Copyright (c) 2011년 __MyCompanyName__. All rights reserved.
+//  Created by Seorenn <hirenn@gmail.com>
 //
 
 #import "SRDateTime.h"
