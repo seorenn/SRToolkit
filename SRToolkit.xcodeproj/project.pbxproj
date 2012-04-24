@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A8CF9051546938C00AFB241 /* SRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CF9041546938C00AFB241 /* SRAlertView.m */; };
 		8A8F9BF4153D0F7B00306893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8F9BF3153D0F7B00306893 /* UIKit.framework */; };
 		8A8F9BF6153D0F7B00306893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8F9BF5153D0F7B00306893 /* Foundation.framework */; };
 		8A8F9BF8153D0F7B00306893 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8F9BF7153D0F7B00306893 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A8CF9031546938C00AFB241 /* SRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = SRAlertView.h; path = Classes/SRAlert/SRAlertView.h; sourceTree = SOURCE_ROOT; };
+		8A8CF9041546938C00AFB241 /* SRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRAlertView.m; path = Classes/SRAlert/SRAlertView.m; sourceTree = SOURCE_ROOT; };
 		8A8F9BEF153D0F7B00306893 /* SRToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8F9BF3153D0F7B00306893 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A8F9BF5153D0F7B00306893 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A8CF9011546935100AFB241 /* SRAlert */ = {
+			isa = PBXGroup;
+			children = (
+				8A8CF9031546938C00AFB241 /* SRAlertView.h */,
+				8A8CF9041546938C00AFB241 /* SRAlertView.m */,
+			);
+			name = SRAlert;
+			sourceTree = "<group>";
+		};
 		8A8F9BE4153D0F7B00306893 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		8A8F9BF9153D0F7B00306893 /* SRToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				8A8CF9011546935100AFB241 /* SRAlert */,
 				8A90A8901540FCA200F82942 /* SRDateTime */,
 				8A8F9C0E153D100700306893 /* SRFullProgressHud */,
 				8A8F9C02153D0F7B00306893 /* AppDelegate.h */,
@@ -201,6 +214,7 @@
 				8A90A88F1540FC0200F82942 /* SRFullProgressHud.m in Sources */,
 				8A90A8931540FCAC00F82942 /* SRDateTime.m in Sources */,
 				8A90A8971541012B00F82942 /* DateTimeTestView.m in Sources */,
+				8A8CF9051546938C00AFB241 /* SRAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

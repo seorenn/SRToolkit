@@ -8,6 +8,7 @@
 #import "TestView.h"
 #import "SRFullProgressHud.h"
 #import "DateTimeTestView.h"
+#import "SRAlertView.h"
 
 @interface TestView ()
 
@@ -24,6 +25,8 @@
         _items = [[NSMutableArray alloc] init];
         [_items addObject:@"SRFullProgressHud Demo"];
         [_items addObject:@"SRDateTime Test"];
+        [_items addObject:@"SRAlertView Demo 1"];
+        [_items addObject:@"SRAlertView Demo 2"];
     }
     return self;
 }
@@ -62,6 +65,13 @@
     [SRFullProgressHud dismiss];
 }
 
+- (void)timeoutForAlert
+{
+    if (_alert == nil) return;
+    
+    [_alert dismiss];
+}
+
 - (void)SRFullProgressHudDemo
 {
     [SRFullProgressHud showWithStatus:@"Will be dismiss after 3 seconds"];
@@ -75,6 +85,19 @@
     [view release];
 }
 
+- (void)SRAlertDemo1
+{
+    _alert = [[[SRAlertView alloc] initWithProgressTitle:@"Progressing" cancelText:@"Close" delegate:nil] autorelease];
+    [_alert show];
+}
+
+- (void)SRAlertDemo2
+{
+    _alert = [[[SRAlertView alloc] initWithProgressTitle:@"Progressing" cancelText:nil delegate:nil] autorelease];
+    [_alert show];
+    _timerForAlert = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timeoutForAlert) userInfo:nil repeats:NO];
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,6 +108,12 @@
             break;
         case 1:
             [self SRDateTimeTest];
+            break;
+        case 2:
+            [self SRAlertDemo1];
+            break;
+        case 3:
+            [self SRAlertDemo2];
             break;
         default:
             break;
