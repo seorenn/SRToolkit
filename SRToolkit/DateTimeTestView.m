@@ -63,7 +63,6 @@
 
 - (void)viewDidUnload
 {
-    [_textView release];
     _textView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -75,9 +74,4 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)dealloc 
-{
-    [_textView release];
-    [super dealloc];
-}
 @end

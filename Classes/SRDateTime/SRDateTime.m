@@ -48,14 +48,13 @@
     
     NSDate *date = [calendar dateFromComponents:components];
     
-    [components release];
     return date;
 
 }
 
 + (SRDateTime *)dateTimeFromNSDate:(NSDate *)date
 {
-    return [[[SRDateTime alloc] initWithNSDate:date] autorelease];
+    return [[SRDateTime alloc] initWithNSDate:date];
 }
 
 @end

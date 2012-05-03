@@ -41,7 +41,6 @@
 
 - (void)viewDidUnload
 {
-    [_tableView release];
     _tableView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -53,12 +52,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)dealloc 
-{
-    [_items release];
-    [_tableView release];
-    [super dealloc];
-}
 
 - (void)timeout
 {
@@ -82,18 +75,17 @@
 {
     DateTimeTestView *view = [[DateTimeTestView alloc] initWithNibName:@"DateTimeTestView" bundle:nil];
     [self.navigationController pushViewController:view animated:YES];
-    [view release];
 }
 
 - (void)SRAlertDemo1
 {
-    _alert = [[[SRAlertView alloc] initWithProgressTitle:@"Progressing" cancelText:@"Close" delegate:nil] autorelease];
+    _alert = [[SRAlertView alloc] initWithProgressTitle:@"Progressing" cancelText:@"Close" delegate:nil];
     [_alert show];
 }
 
 - (void)SRAlertDemo2
 {
-    _alert = [[[SRAlertView alloc] initWithProgressTitle:@"Progressing" cancelText:nil delegate:nil] autorelease];
+    _alert = [[SRAlertView alloc] initWithProgressTitle:@"Progressing" cancelText:nil delegate:nil];
     [_alert show];
     _timerForAlert = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timeoutForAlert) userInfo:nil repeats:NO];
 }

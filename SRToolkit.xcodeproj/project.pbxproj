@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A8B5B3715525C8F0046882B /* SRCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B5B3615525C8F0046882B /* SRCalendar.m */; };
 		8A8CF9051546938C00AFB241 /* SRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CF9041546938C00AFB241 /* SRAlertView.m */; };
 		8A8F9BF4153D0F7B00306893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8F9BF3153D0F7B00306893 /* UIKit.framework */; };
 		8A8F9BF6153D0F7B00306893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8F9BF5153D0F7B00306893 /* Foundation.framework */; };
@@ -23,7 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A8CF9031546938C00AFB241 /* SRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = SRAlertView.h; path = Classes/SRAlert/SRAlertView.h; sourceTree = SOURCE_ROOT; };
+		8A8B5B3515525C8F0046882B /* SRCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCalendar.h; path = Classes/SRCalendar/SRCalendar.h; sourceTree = SOURCE_ROOT; };
+		8A8B5B3615525C8F0046882B /* SRCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRCalendar.m; path = Classes/SRCalendar/SRCalendar.m; sourceTree = SOURCE_ROOT; };
+		8A8CF9031546938C00AFB241 /* SRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRAlertView.h; path = Classes/SRAlert/SRAlertView.h; sourceTree = SOURCE_ROOT; };
 		8A8CF9041546938C00AFB241 /* SRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRAlertView.m; path = Classes/SRAlert/SRAlertView.m; sourceTree = SOURCE_ROOT; };
 		8A8F9BEF153D0F7B00306893 /* SRToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8F9BF3153D0F7B00306893 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A8B5B3415525C770046882B /* SRCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				8A8B5B3515525C8F0046882B /* SRCalendar.h */,
+				8A8B5B3615525C8F0046882B /* SRCalendar.m */,
+			);
+			name = SRCalendar;
+			sourceTree = "<group>";
+		};
 		8A8CF9011546935100AFB241 /* SRAlert */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 		8A8F9BF9153D0F7B00306893 /* SRToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				8A8B5B3415525C770046882B /* SRCalendar */,
 				8A8CF9011546935100AFB241 /* SRAlert */,
 				8A90A8901540FCA200F82942 /* SRDateTime */,
 				8A8F9C0E153D100700306893 /* SRFullProgressHud */,
@@ -215,6 +228,7 @@
 				8A90A8931540FCAC00F82942 /* SRDateTime.m in Sources */,
 				8A90A8971541012B00F82942 /* DateTimeTestView.m in Sources */,
 				8A8CF9051546938C00AFB241 /* SRAlertView.m in Sources */,
+				8A8B5B3715525C8F0046882B /* SRCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +294,7 @@
 		8A8F9C08153D0F7B00306893 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SRToolkit/SRToolkit-Prefix.pch";
 				INFOPLIST_FILE = "SRToolkit/SRToolkit-Info.plist";
@@ -291,6 +306,7 @@
 		8A8F9C09153D0F7B00306893 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SRToolkit/SRToolkit-Prefix.pch";
 				INFOPLIST_FILE = "SRToolkit/SRToolkit-Info.plist";

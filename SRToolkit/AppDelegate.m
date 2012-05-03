@@ -12,22 +12,15 @@
 
 @synthesize window = _window;
 
-- (void)dealloc
-{
-    [_nav release];
-    [_window release];
-    [super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
     TestView *view = [[TestView alloc] initWithNibName:@"TestView" bundle:nil];
     _nav = [[UINavigationController alloc] initWithRootViewController:view];
-    [view release];
     
     [self.window addSubview:_nav.view];
     

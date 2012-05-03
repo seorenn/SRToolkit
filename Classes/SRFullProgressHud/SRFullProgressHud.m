@@ -30,12 +30,6 @@ SRFullProgressHud *g_srFullProgressHudInstance = nil;
     return self;
 }
 
-- (void)dealloc
-{
-    [_view release];
-    
-    [super dealloc];
-}
 
 #pragma mark - Private APIs
 
@@ -69,7 +63,6 @@ SRFullProgressHud *g_srFullProgressHudInstance = nil;
     ai.frame = aiframe;
     [ai startAnimating];
     [_view addSubview:ai];
-    [ai release];
 
     // create label
     CGRect lframe = CGRectMake(0, aiframe.origin.y + aiframe.size.height + SRFullProgressHudGap, _view.frame.size.width, SRFullProgressHudGap + SRFullProgressHudDefaultFontSize + SRFullProgressHudGap);
@@ -80,7 +73,6 @@ SRFullProgressHud *g_srFullProgressHudInstance = nil;
     label.textColor = SRFullProgressHudStatusColor;
     label.text = status;
     [_view addSubview:label];
-    [label release];
 }
 
 - (void)showWithStatus:(NSString *)status
@@ -104,7 +96,6 @@ SRFullProgressHud *g_srFullProgressHudInstance = nil;
 - (void)hudDismissed
 {
     [_view removeFromSuperview];
-    [_view release];
     _view = nil;
 }
 

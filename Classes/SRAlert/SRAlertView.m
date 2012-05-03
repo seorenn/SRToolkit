@@ -37,7 +37,6 @@
         [ind startAnimating];
         
         [self addSubview:ind];
-        [ind release];
     }
     
     return self;
