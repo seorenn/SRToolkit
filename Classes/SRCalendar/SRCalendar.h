@@ -12,15 +12,15 @@
     int _count;
 }
 
-@property (nonatomic, weak) NSDate *date;
+@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSCalendar *calendar;
-
-// TODO: test codes
-+ (void)test;
 
 - (int)shift;
 - (int)days;
+- (int)weeks;
 - (void)stepMonth:(int)month;
 - (NSArray *)weekNames;
+- (BOOL)isSundayWithDay:(int)day;
+- (BOOL)isSaturdayWithDay:(int)day;
 
 @end

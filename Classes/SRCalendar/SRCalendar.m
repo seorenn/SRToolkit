@@ -17,6 +17,7 @@
     self = [super init];
     if (self) {
         self.calendar = [NSCalendar currentCalendar];
+        self.date = [NSDate date];
     }
     return self;
 }
@@ -72,46 +73,39 @@
     return names;
 }
 
-// TODO: test codes
-+ (void)test
+// returns number of weeks (eg. count of calendar row)
+- (int)weeks
 {
-    NSDate *now = [NSDate date];
-    SRCalendar *cal = [[SRCalendar alloc] init];
-    cal.date = now;
+    int num = [self days] + [self shift];
+    int weeks = num / 7;
+    if (num % 7 > 0) weeks++;
     
-    NSLog(@"now: %@", now);
-    NSLog(@"days: %d", [cal days]);
-    NSLog(@"shift: %d", [cal shift]);
-    
-    [cal stepMonth:1];
-    NSLog(@"nextMonth: %@", cal.date);
-    NSLog(@"days: %d", [cal days]);
-    NSLog(@"shift: %d", [cal shift]);
-    
-    [cal stepMonth:-2];
-    NSLog(@"prevMonth: %@", cal.date);
-    NSLog(@"days: %d", [cal days]);
-    NSLog(@"shift: %d", [cal shift]);
-    
-    [cal stepMonth:-11];
-    NSLog(@"prevYear: %@", cal.date);
-    NSLog(@"days: %d", [cal days]);
-    NSLog(@"shift: %d", [cal shift]);
+    return weeks;
+}
 
-    [cal stepMonth:12];
-    NSLog(@"nextYear: %@", cal.date);
-    NSLog(@"days: %d", [cal days]);
-    NSLog(@"shift: %d", [cal shift]);
-    
-    NSLog(@"week names----");
-    for (NSString *weekName in [cal weekNames]) {
-        // if your localzation was country using multi-byte language
-        //     (eg. Chinese, Japanese or Korean, etc...),
-        //     this code will log invalid chanracters or spaces or none.
-        // If you want to watch this multi-byte character in log-window,
-        //     switch your debugger to GDB from LLDB.
-        NSLog(@"%@", weekName);
+- (BOOL)isSundayWithDay:(int)day
+{
+    int daysOfFirstWeek = 7 - [self shift];
+    if (daysOfFirstWeek > 0 && day <= daysOfFirstWeek) {
+        return NO;
     }
+    
+    if ((day - (daysOfFirstWeek+1)) % 7 == 0) return YES;
+    
+    return NO;
+}
+
+- (BOOL)isSaturdayWithDay:(int)day
+{
+    int daysOfFirstWeek = 7 - [self shift];
+    if (daysOfFirstWeek > 0 && day <= daysOfFirstWeek) {
+        if (day == daysOfFirstWeek) return YES;
+        return NO;
+    }
+    
+    if ((day - (daysOfFirstWeek+1)) % 7 == 6) return YES;
+    
+    return NO;
 }
 
 @end
