@@ -1,9 +1,8 @@
 //
 //  SRFile.h
-//  TableViewTest
+//  SRToolkit
 //
-//  Created by Heeseung Seo on 13. 3. 25..
-//  Copyright (c) 2013년 Heeseung Seo. All rights reserved.
+//  Created by Seorenn
 //
 
 #import <Foundation/Foundation.h>
