@@ -1,4 +1,4 @@
 SRToolkit
 =========
 
-Seorenn(SR) Toolkit for iOS
+Seorenn(SR) Toolkit for Cocoa and Cocoa Touch
